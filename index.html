@@ -1,0 +1,922 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>מתמטיקה עם זהר · שיעורים פרטיים בזום</title>
+<meta name="description" content="שיעורי מתמטיקה בזום לחטיבה, לבגרות 3, 4 ו־5 יחידות ולתלמידי נוער מוכשר. גם שיעור בודד לפני מבחן, בלי התחייבות. שיחת אבחון של 20 דקות בחינם.">
+<link rel="canonical" href="https://zoharishere.github.io/math-with-zohar/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="מתמטיקה עם זהר">
+<meta property="og:title" content="שיעורי מתמטיקה שסוף סוף מבינים · זהר אלקיים">
+<meta property="og:description" content="שיעורי מתמטיקה בזום לחטיבה, לבגרות 3, 4 ו־5 יחידות ולתלמידי נוער מוכשר. גם שיעור בודד לפני מבחן, בלי התחייבות. שיחת אבחון של 20 דקות בחינם.">
+<meta property="og:url" content="https://zoharishere.github.io/math-with-zohar/">
+<meta property="og:image" content="https://zoharishere.github.io/math-with-zohar/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="מתמטיקה עם זהר: שיעורים פרטיים בזום">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#fbfbfd">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231764f4'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3E%CF%80%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>
+:root{
+  --bg:#fbfbfd; --bg-2:#f3f3f6; --card:#ffffff;
+  --ink:#1d1d1f; --ink-2:#6e6e73; --ink-3:#a1a1a6; --line:#e2e2e7;
+  --dark:#0a0a0c; --dark-2:#141417; --on-dark:#f5f5f7; --on-dark-2:#a1a1a6; --dark-line:#2b2b31;
+  --accent:#1764f4; --accent-hi:#0f56dc; --accent-2:#6ea3ff; --accent-soft:rgba(23,100,244,.09);
+  --gap:#ff6a2b;
+  --chat-bg:#efeae2; --chat-out:#d9fdd3; --chat-bar:#f6f5f3;
+  --font:"Heebo",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --nav-h:56px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.6;direction:rtl;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:clip}
+a{color:inherit}
+button{font-family:inherit}
+[id]{scroll-margin-top:calc(var(--nav-h) + env(safe-area-inset-top,0px) + 8px)}
+:focus-visible{outline:3px solid rgba(23,100,244,.45);outline-offset:3px;border-radius:12px}
+.gut{padding-left:max(22px,env(safe-area-inset-left,0px));padding-right:max(22px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1080px;margin-inline:auto}
+.eyebrow{font-size:15px;font-weight:600;color:var(--accent);margin:0 0 12px}
+.h2{font-size:clamp(34px,5.4vw,64px);font-weight:800;line-height:1.08;letter-spacing:-.025em;margin:0;text-wrap:balance}
+.lede{font-size:clamp(18px,1.9vw,21px);color:var(--ink-2);margin:18px 0 0;max-width:46ch}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 17px var(--font);text-decoration:none;border-radius:999px;padding:15px 28px;border:0;cursor:pointer;transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .2s}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 28px -8px rgba(23,100,244,.55)}
+.btn-primary:hover{background:var(--accent-hi);box-shadow:0 16px 36px -10px rgba(23,100,244,.6)}
+.btn-primary:active{transform:scale(.97)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);padding:13px 22px;font-size:15px}
+.btn-ghost:hover{border-color:#c4c4cc}
+.btn-light{background:#fff;color:var(--ink)}
+.btn-light:hover{background:#ececf0}
+.arrow-link{color:var(--accent);font-weight:500;font-size:17px;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.arrow-link i{font-style:normal;transition:transform .3s var(--ease)}
+.arrow-link:hover i{transform:translateX(-4px)}
+.arrow-link:hover{text-decoration:underline;text-underline-offset:4px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:rgba(251,251,253,.92)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);background:rgba(251,251,253,.68);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
+.nav.scrolled{border-bottom-color:var(--line);background:rgba(251,251,253,.84)}
+.nav-in{max-width:1080px;margin-inline:auto;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:baseline;gap:8px;text-decoration:none;white-space:nowrap}
+.brand b{font-weight:800;font-size:18px;letter-spacing:-.01em}
+.brand span{font-size:13px;color:var(--ink-2)}
+.links{display:flex;gap:28px;font-size:14px}
+.links a{color:var(--ink-2);text-decoration:none;transition:color .2s}
+.links a:hover{color:var(--ink)}
+.nav-cta{font:600 14px var(--font);background:var(--accent);color:#fff;text-decoration:none;padding:7px 16px;border-radius:999px;white-space:nowrap;transition:background .2s}
+.nav-cta:hover{background:var(--accent-hi)}
+.nav-progress{position:absolute;bottom:-1px;right:0;left:0;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:right;opacity:.85}
+.hero{position:relative;text-align:center;overflow:hidden;padding-top:calc(var(--nav-h) + env(safe-area-inset-top,0px) + clamp(60px,10vw,128px));padding-bottom:clamp(64px,9vw,112px)}
+.glyphs{position:absolute;inset:0;pointer-events:none;z-index:0}
+.glayer{position:absolute;inset:0;transform:translate3d(var(--mx,0px),calc(var(--my,0px) + var(--sy,0px)),0);will-change:transform}
+.glyph{position:absolute;font-weight:300;color:var(--ink);line-height:1;animation:drift var(--t,14s) ease-in-out var(--dl,0s) infinite alternate}
+@keyframes drift{from{transform:translateY(0) rotate(0deg)}to{transform:translateY(-20px) rotate(7deg)}}
+.hero-in{position:relative;z-index:1;max-width:980px;margin-inline:auto}
+.chip{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--ink-2);padding:7px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.75);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.chip .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:ping 2.4s ease-out infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(23,100,244,.45)}70%,100%{box-shadow:0 0 0 9px rgba(23,100,244,0)}}
+.hero h1{font-size:clamp(40px,8.8vw,112px);font-weight:800;line-height:1.02;letter-spacing:-.035em;margin:26px 0 0}
+.hero h1 .l{display:block}
+.grad{background:linear-gradient(270deg,#1764f4 0%,#3b86ff 45%,#8ab8ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
+.hero .sub{font-size:clamp(18px,2vw,22px);color:var(--ink-2);max-width:40ch;margin:26px auto 0;line-height:1.55}
+.ctas{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:16px 30px;margin-top:38px}
+.assure{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 22px;margin:22px 0 0;font-size:14.5px;color:var(--ink-2)}
+.assure span{display:inline-flex;align-items:center;gap:8px}
+.assure span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);opacity:.75}
+.stats{list-style:none;padding:0;margin:clamp(60px,8vw,96px) auto 0;max-width:940px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.stats li{padding:6px 18px;display:grid;gap:4px;align-content:start}
+.stats li + li{border-inline-start:1px solid var(--line)}
+.stats b{font-size:clamp(28px,3.4vw,40px);font-weight:800;letter-spacing:-.025em;line-height:1.1}
+.stats li > span{font-size:14px;color:var(--ink-2);line-height:1.4}
+@media (prefers-reduced-motion:no-preference){
+  .rise{animation:rise 1.1s var(--ease) both;animation-delay:var(--d,0s)}
+}
+@keyframes rise{from{opacity:.12;transform:translateY(34px)}to{opacity:1;transform:none}}
+.about{padding-block:clamp(96px,13vw,170px)}
+.about-head{max-width:760px}
+.about .h2 .grad{padding-bottom:.06em}
+.path{list-style:none;margin:clamp(52px,7vw,84px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;position:relative;--p:0}
+.path::before,.path::after{content:"";position:absolute;top:9px;right:10px;left:calc((100% - 72px) / 4 - 10px);height:2px;border-radius:2px}
+.path::before{background:var(--line)}
+.path::after{background:linear-gradient(270deg,var(--accent),var(--accent-2));transform:scaleX(var(--p));transform-origin:right}
+.node{position:relative;padding-top:40px;display:grid;gap:6px;align-content:start}
+.node::before{content:"";position:absolute;top:0;right:0;width:20px;height:20px;border-radius:50%;box-sizing:border-box;background:var(--bg);border:2px solid #cfcfd6;z-index:1;transition:border-color .45s var(--ease),background .45s var(--ease),box-shadow .45s var(--ease)}
+.node.lit::before{border-color:var(--accent);background:var(--accent);box-shadow:0 0 0 6px var(--accent-soft)}
+.node .when{font-size:14px;font-weight:600;color:var(--ink-3);transition:color .45s}
+.node.lit .when{color:var(--accent)}
+.node h3{font-size:clamp(20px,2vw,24px);font-weight:800;letter-spacing:-.015em;margin:0;line-height:1.2}
+.node p{margin:0;color:var(--ink-2);font-size:16px;line-height:1.55}
+.method{background:var(--dark);color:var(--on-dark);padding-block:clamp(96px,12vw,160px) clamp(40px,6vw,80px)}
+.method .eyebrow{color:var(--accent-2)}
+.method .lede{color:var(--on-dark-2)}
+.mgrid{max-width:1080px;margin:clamp(24px,4vw,40px) auto 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(28px,5vw,72px)}
+.mstep{min-height:78vh;display:flex;flex-direction:column;justify-content:center;gap:12px;opacity:.26;transition:opacity .6s var(--ease)}
+.mstep.on{opacity:1}
+.mstep .num{font-size:15px;font-weight:600;color:var(--accent-2)}
+.mstep h3{font-size:clamp(30px,3.7vw,46px);font-weight:800;letter-spacing:-.022em;margin:0;line-height:1.1}
+.mstep p{color:var(--on-dark-2);font-size:clamp(17px,1.7vw,20px);max-width:34ch;margin:0}
+.mvis{position:sticky;top:calc(var(--nav-h) + env(safe-area-inset-top,0px) + 7vh);height:78vh;display:flex;align-items:center;justify-content:center}
+.stage{width:100%;max-width:100%;aspect-ratio:640/470;border-radius:30px;background:radial-gradient(120% 90% at 50% 100%,#17181f 0%,#0d0d10 62%);border:1px solid var(--dark-line);overflow:hidden;box-shadow:0 40px 80px -40px rgba(0,0,0,.8)}
+.stage svg{display:block;width:100%;height:100%}
+.st{fill:url(#stepG);stroke:#33333a;stroke-width:1}
+.st-top{stroke:#5a5a64;stroke-width:2;stroke-linecap:round}
+.lbl{fill:#8e8e96;font:500 19px var(--font);text-anchor:middle}
+.gapbox{fill:rgba(255,106,43,.07);stroke:var(--gap);stroke-width:2;stroke-dasharray:8 6;transition:opacity .6s}
+.gapfill{fill:url(#fillG);transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);transition:transform 1.1s var(--ease)}
+.note{font:700 21px var(--font);text-anchor:middle;transition:opacity .5s}
+.note.gapn{fill:var(--gap)}
+.note.fixn{fill:var(--accent-2);opacity:0}
+[data-state="2"] .gapfill,[data-state="3"] .gapfill{transform:scaleY(1)}
+[data-state="2"] .gapbox,[data-state="3"] .gapbox{opacity:0}
+[data-state="2"] .gapn,[data-state="3"] .gapn{opacity:0}
+[data-state="2"] .fixn{opacity:1}
+.flag{opacity:0;transform:translateY(10px);transform-box:fill-box;transition:opacity .5s,transform .5s var(--ease)}
+.flag.show{opacity:1;transform:none}
+@media (prefers-reduced-motion:no-preference){
+  [data-state="1"] .gapbox{animation:gpulse 1.6s ease-in-out infinite}
+  [data-state="1"] #marker circle{animation:stuck 2.6s ease-in-out infinite}
+}
+@keyframes gpulse{50%{opacity:.35}}
+@keyframes stuck{0%,60%,100%{transform:translateX(0)}66%{transform:translateX(-6px)}72%{transform:translateX(5px)}78%{transform:translateX(-3px)}}
+.tracks{padding-block:clamp(96px,12vw,160px)}
+.seg{position:relative;display:inline-flex;background:#e8e8ed;border-radius:999px;padding:4px;margin-top:34px;max-width:100%}
+.seg [role="tab"]{position:relative;z-index:1;border:0;background:transparent;font:600 15px var(--font);color:var(--ink-2);padding:10px 22px;border-radius:999px;cursor:pointer;transition:color .3s;white-space:nowrap}
+.seg [role="tab"][aria-selected="true"]{color:var(--ink)}
+.seg-ind{position:absolute;top:4px;bottom:4px;left:0;width:0;border-radius:999px;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.06);transition:transform .5s var(--ease),width .5s var(--ease)}
+.panels{margin-top:26px}
+.panel{border-radius:32px;padding:clamp(26px,4vw,52px);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(24px,4vw,56px)}
+.panel.enter{animation:pin .7s var(--ease)}
+@keyframes pin{from{opacity:0;transform:translateY(18px) scale(.985)}to{opacity:1;transform:none}}
+.panel.school{background:var(--card);border:1px solid var(--line);box-shadow:0 40px 80px -48px rgba(0,0,0,.2)}
+.panel.gifted{background:radial-gradient(120% 130% at 100% 0%,#1a2342 0%,#0c0c10 58%);color:var(--on-dark);border:1px solid #1f2335;box-shadow:0 40px 80px -40px rgba(10,20,60,.55)}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.gifted .badge{background:rgba(110,163,255,.14);color:#a9c8ff;border:1px solid rgba(110,163,255,.28)}
+.panel h3{font-size:clamp(28px,3.3vw,42px);font-weight:800;letter-spacing:-.022em;line-height:1.1;margin:16px 0 12px}
+.panel .d{color:var(--ink-2);font-size:18px;margin:0 0 24px;max-width:48ch}
+.gifted .d{color:#b4b4bc}
+.feat{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.feat li{display:flex;gap:12px;align-items:flex-start;font-size:17px;line-height:1.5}
+.feat svg{flex:none;width:22px;height:22px;margin-top:2px}
+.pricebox{border-radius:24px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;gap:26px;background:var(--bg-2)}
+.gifted .pricebox{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09)}
+.plabel{font-size:14px;color:var(--ink-2);margin:0 0 6px}
+.gifted .plabel,.gifted .pmeta{color:#a1a1aa}
+.price{font-size:clamp(60px,6.4vw,82px);font-weight:800;letter-spacing:-.035em;line-height:1;display:flex;align-items:baseline;gap:10px}
+.price small{font-size:17px;font-weight:500;letter-spacing:0;color:var(--ink-2)}
+.gifted .price small{color:#a1a1aa}
+.pmeta{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:8px;font-size:15px;color:var(--ink-2)}
+.pmeta li{display:flex;gap:8px;align-items:center}
+.pmeta li::before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.6;flex:none}
+.why{padding-block:clamp(96px,12vw,160px);background:var(--bg-2)}
+.bento{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:clamp(36px,5vw,56px)}
+.card{position:relative;border-radius:28px;background:var(--card);border:1px solid var(--line);padding:30px;min-height:250px;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;overflow:hidden;transform:perspective(1000px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(440px circle at var(--mx,50%) var(--my,50%),rgba(23,100,244,.11),transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none}
+.card:hover::before{opacity:1}
+.card:hover{box-shadow:0 34px 70px -36px rgba(0,0,0,.22)}
+.card > *{position:relative}
+.card > .ic{position:absolute;top:28px;inset-inline-start:30px;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent)}
+.ic svg{width:24px;height:24px}
+.card h3{font-size:24px;font-weight:800;letter-spacing:-.015em;margin:0;line-height:1.15}
+.card p{margin:0;color:var(--ink-2);font-size:16.5px;line-height:1.55}
+.card.wide{grid-column:span 2}
+.card.full{grid-column:1 / -1;min-height:0;flex-direction:row;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.card.full .txt{display:grid;gap:8px;max-width:60ch}
+.card.darkc{background:linear-gradient(160deg,#17181e,#0b0b0e);border-color:#23242b;color:var(--on-dark)}
+.card.darkc p{color:#a1a1aa}
+.card.darkc::before{background:radial-gradient(440px circle at var(--mx,50%) var(--my,50%),rgba(110,163,255,.2),transparent 60%)}
+.card.darkc > .ic{background:rgba(110,163,255,.14);color:var(--accent-2)}
+.big{font-size:clamp(76px,8.4vw,112px);font-weight:900;letter-spacing:-.045em;line-height:.9;background:linear-gradient(180deg,#1d1d1f 30%,#6e6e73);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:auto}
+.contact{padding-block:clamp(96px,12vw,160px)}
+.cbox{margin-top:clamp(36px,5vw,56px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:18px;align-items:stretch}
+.stepper{background:var(--card);border:1px solid var(--line);border-radius:32px;padding:clamp(24px,3.4vw,40px);display:flex;flex-direction:column;gap:22px;min-height:480px;box-shadow:0 40px 80px -56px rgba(0,0,0,.25)}
+.prog{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}
+.prog i{height:4px;border-radius:4px;background:#e8e8ed;position:relative;overflow:hidden}
+.prog i::after{content:"";position:absolute;inset:0;background:var(--accent);transform:scaleX(0);transform-origin:right;transition:transform .6s var(--ease)}
+.prog i.done::after{transform:scaleX(1)}
+.qbox{flex:1;min-width:0}
+.q h3{font-size:clamp(25px,2.7vw,32px);font-weight:800;letter-spacing:-.018em;margin:4px 0 20px;line-height:1.2}
+@media (prefers-reduced-motion:no-preference){
+  .q.fwd{animation:qf .55s var(--ease)}
+  .q.bwd{animation:qb .55s var(--ease)}
+}
+@keyframes qf{from{opacity:0;transform:translateX(-34px)}to{opacity:1;transform:none}}
+@keyframes qb{from{opacity:0;transform:translateX(34px)}to{opacity:1;transform:none}}
+.opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.opt{font:500 17px var(--font);text-align:start;padding:17px 18px;border-radius:16px;border:1.5px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:58px;transition:border-color .2s,background .2s,transform .25s var(--ease),box-shadow .25s}
+.opt:hover{border-color:#c4c4cc;transform:translateY(-2px);box-shadow:0 10px 20px -14px rgba(0,0,0,.25)}
+.opt:active{transform:scale(.98)}
+.opt[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft)}
+.ck{width:22px;height:22px;border-radius:50%;border:1.5px solid #c9c9d0;display:grid;place-items:center;flex:none;transition:background .2s,border-color .2s}
+.ck svg{opacity:0;transition:opacity .2s}
+.opt[aria-pressed="true"] .ck{background:var(--accent);border-color:var(--accent)}
+.opt[aria-pressed="true"] .ck svg{opacity:1}
+.opts.grades{grid-template-columns:repeat(6,minmax(0,1fr))}
+.opts.grades .opt{justify-content:center;padding:16px 0;font-size:19px;font-weight:600}
+.snav{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.qback{border:0;background:transparent;color:var(--ink-2);font:500 15px var(--font);cursor:pointer;padding:8px 2px;display:inline-flex;gap:6px;align-items:center}
+.qback:hover{color:var(--ink)}
+.skip{font-size:14px;color:var(--ink-2)}
+.skip a{color:var(--accent);text-decoration:none}
+.skip a:hover{text-decoration:underline}
+.fields{display:grid;gap:14px}
+.fields label{font-weight:600;font-size:15px}
+.fields input,.fields textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:14px;padding:13px 15px;width:100%;transition:border-color .2s,box-shadow .2s}
+.fields textarea{min-height:88px;resize:vertical}
+.fields input:focus,.fields textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+.fgrp{display:grid;gap:7px}
+.sendrow{display:grid;gap:12px;margin-top:6px}
+.sendrow .btn-primary{width:100%;padding:17px}
+.subrow{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;font-size:14px;color:var(--ink-2)}
+.num{font-weight:600;color:var(--ink);user-select:all}
+.toast{font-size:14px;color:var(--accent);min-height:1.3em;margin:0}
+.chat{border-radius:32px;background:var(--chat-bg);border:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden;min-height:480px}
+.chat-head{display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--chat-bar);border-bottom:1px solid #e3ded5}
+.avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#1764f4,#7fb0ff);color:#fff;display:grid;place-items:center;font-weight:800;font-size:17px;flex:none}
+.chat-head div{display:grid;line-height:1.3;justify-items:start}
+.chat-head b{font-size:15px}
+.chat-head span{font-size:12.5px;color:#6b6f75}
+.chat-body{flex:1;padding:22px 18px;display:flex;flex-direction:column;justify-content:flex-end;gap:8px}
+.daytag{align-self:center;font-size:12px;color:#5f6368;background:rgba(255,255,255,.75);padding:4px 10px;border-radius:8px}
+.bubble{align-self:flex-end;max-width:90%;background:var(--chat-out);border-radius:14px 14px 14px 4px;padding:10px 13px 22px;font-size:15.5px;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere;box-shadow:0 1px 1px rgba(0,0,0,.08);position:relative;min-width:120px}
+.bubble .meta{position:absolute;bottom:5px;left:10px;font-size:11px;color:#667781;display:flex;gap:3px;align-items:center}
+.bubble.bump{animation:bump .4s var(--ease)}
+@keyframes bump{0%{transform:scale(.97)}60%{transform:scale(1.012)}100%{transform:none}}
+.chat-foot{padding:12px 18px;background:var(--chat-bar);border-top:1px solid #e3ded5;font-size:13px;color:#6b6f75}
+.faq{padding-block:clamp(84px,10vw,140px)}
+.acc{max-width:840px;margin-top:40px;border-top:1px solid var(--line)}
+.qa{border-bottom:1px solid var(--line)}
+.qa > button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:24px 0;background:none;border:0;font:700 clamp(18px,1.9vw,21px) var(--font);color:var(--ink);text-align:start;cursor:pointer}
+.pm{width:30px;height:30px;border-radius:50%;background:var(--bg-2);position:relative;flex:none;transition:transform .45s var(--ease),background .3s}
+.pm::before,.pm::after{content:"";position:absolute;top:50%;left:50%;width:12px;height:2px;margin:-1px 0 0 -6px;background:var(--ink);border-radius:2px}
+.pm::after{transform:rotate(90deg)}
+.qa > button:hover .pm{background:#e6e6eb}
+.qa.open .pm{transform:rotate(45deg)}
+.ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--ease)}
+.qa.open .ans{grid-template-rows:1fr}
+.ans > div{overflow:hidden;min-height:0}
+.ans p{margin:0 0 26px;color:var(--ink-2);max-width:62ch}
+.final{background:var(--dark);color:var(--on-dark);text-align:center;padding-block:clamp(110px,14vw,190px);position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;width:1000px;height:1000px;left:50%;top:50%;transform:translate(-50%,-34%);background:radial-gradient(circle,rgba(23,100,244,.38),transparent 62%);pointer-events:none}
+.final > *{position:relative}
+.final .h2{font-size:clamp(42px,7vw,88px)}
+.final .gradw{background:linear-gradient(180deg,#ffffff 30%,#9ec2ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.final p{color:var(--on-dark-2);font-size:clamp(18px,2vw,21px);margin:20px auto 38px;max-width:40ch}
+.final .phone{display:block;margin-top:22px;font-size:15px;color:var(--on-dark-2)}
+.final .phone .num{color:var(--on-dark)}
+footer{background:var(--bg-2);font-size:13px;color:var(--ink-2);padding-block:26px calc(26px + env(safe-area-inset-bottom,0px))}
+footer .wrap{display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap}
+.mbar{display:none}
+.rv{transition:opacity 1s var(--ease),transform 1s var(--ease),filter 1s var(--ease);transition-delay:var(--d,0s)}
+.rv.pre{opacity:.18;transform:translateY(44px) scale(.985);filter:blur(6px)}
+@media (max-width:980px){
+  .links{display:none}
+  .mgrid{grid-template-columns:minmax(0,1fr);gap:0}
+  .mvis{order:-1;top:calc(var(--nav-h) + env(safe-area-inset-top,0px));height:auto;padding-block:10px 14px;background:var(--dark);z-index:3}
+  .stage{width:min(100%,calc(40vh * 640 / 470))}
+  .mstep{min-height:72vh}
+  .panel{grid-template-columns:minmax(0,1fr)}
+  .cbox{grid-template-columns:minmax(0,1fr)}
+  .chat{min-height:340px}
+}
+@media (max-width:760px){
+  .path{grid-template-columns:minmax(0,1fr);gap:30px;padding-inline-start:38px}
+  .path::before,.path::after{top:10px;bottom:30px;right:9px;left:auto;width:2px;height:auto}
+  .path::after{transform:scaleY(var(--p));transform-origin:top}
+  .node{padding-top:0}
+  .node::before{right:-38px;top:3px}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:26px}
+  .stats li:nth-child(3){border-inline-start:0}
+  .bento{grid-template-columns:minmax(0,1fr)}
+  .card.wide{grid-column:auto}
+  .card{min-height:220px}
+  .opts.grades{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .opts{grid-template-columns:minmax(0,1fr)}
+  .hide-sm{display:none}
+  .seg [role="tab"]{padding:10px 16px;font-size:14px}
+  footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:45;align-items:center;justify-content:space-between;gap:12px;background:rgba(251,251,253,.86);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border-top:1px solid var(--line);padding-top:10px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));transform:translateY(120%);transition:transform .5s var(--ease)}
+  .mbar.show{transform:none}
+  .mbar p{margin:0;font-size:13px;color:var(--ink-2);line-height:1.35}
+  .mbar p b{display:block;color:var(--ink);font-size:15px}
+  .mbar .btn{padding:11px 18px;font-size:15px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv.pre{opacity:1;transform:none;filter:none}
+}
+</style>
+</head>
+<body>
+<header class="nav gut">
+  <div class="nav-in">
+    <a class="brand" href="#top"><b>זהר אלקיים</b><span>מתמטיקה</span></a>
+    <nav class="links" aria-label="ניווט">
+      <a href="#method">השיטה</a>
+      <a href="#tracks">מסלולים ומחירים</a>
+      <a href="#why">למה איתי</a>
+      <a href="#faq">שאלות</a>
+    </nav>
+    <a class="nav-cta" href="#contact">שיחת אבחון</a>
+  </div>
+  <div class="nav-progress" aria-hidden="true"></div>
+</header>
+
+<main id="top">
+
+  <section class="hero gut" aria-labelledby="h1">
+    <div class="glyphs" aria-hidden="true">
+      <div class="glayer" data-depth="0.45">
+        <span class="glyph" style="top:20%;left:7%;font-size:56px;opacity:.07;--t:15s">π</span>
+        <span class="glyph" style="top:64%;right:6%;font-size:62px;opacity:.07;--t:17s;--dl:-4s">∑</span>
+        <span class="glyph hide-sm" style="top:34%;right:15%;font-size:46px;opacity:.06;--t:13s;--dl:-2s">√</span>
+        <span class="glyph" style="top:76%;left:13%;font-size:52px;opacity:.07;--t:16s;--dl:-6s">∞</span>
+      </div>
+      <div class="glayer" data-depth="0.9">
+        <span class="glyph" style="top:13%;right:8%;font-size:66px;opacity:.09;--t:12s;--dl:-3s">x²</span>
+        <span class="glyph" style="top:46%;left:4%;font-size:92px;opacity:.08;--t:18s;--dl:-8s">∫</span>
+        <span class="glyph hide-sm" style="top:84%;right:22%;font-size:48px;opacity:.08;--t:14s">÷</span>
+        <span class="glyph hide-sm" style="top:38%;left:19%;font-size:42px;opacity:.07;--t:11s;--dl:-5s">θ</span>
+      </div>
+      <div class="glayer" data-depth="1.4">
+        <span class="glyph hide-sm" style="top:9%;left:24%;font-size:40px;opacity:.1;--t:10s;--dl:-1s">Δ</span>
+        <span class="glyph hide-sm" style="top:58%;right:25%;font-size:44px;opacity:.09;--t:13s;--dl:-7s">±</span>
+        <span class="glyph" style="top:88%;left:32%;font-size:38px;opacity:.09;--t:12s;--dl:-2s">%</span>
+      </div>
+    </div>
+
+    <div class="hero-in">
+      <span class="chip rise" style="--d:.05s"><span class="dot"></span>שיעורים פרטיים בזום, מכל מקום בארץ</span>
+      <h1 id="h1"><span class="l rise" style="--d:.15s">שיעורי מתמטיקה</span><span class="l rise grad" style="--d:.3s">שסוף סוף מבינים.</span></h1>
+      <p class="sub rise" style="--d:.45s">לחטיבה, לבגרות 3, 4 ו־5 יחידות ולתלמידי התוכנית לנוער מוכשר. עם מורה שסיים 5 יחידות כבר בכיתה י׳, לומד היום לתואר במקביל לתיכון, ולכן זוכר בדיוק איפה נופלים.</p>
+      <div class="ctas rise" style="--d:.6s">
+        <a class="btn btn-primary mag" data-wa="" href="#contact">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.200 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
+          לשיחת אבחון בחינם
+        </a>
+        <a class="arrow-link" href="#tracks">לבחירת מסלול <i aria-hidden="true">‹</i></a>
+      </div>
+      <p class="assure rise" style="--d:.68s"><span>גם שיעור אחד לפני מבחן</span><span>בלי חבילות ובלי התחייבות</span><span>שיחת אבחון של 20 דקות, עליי</span></p>
+      <ul class="stats rise" style="--d:.75s">
+        <li><b>כיתה י׳</b><span>סיום 5 יחידות במתמטיקה</span></li>
+        <li><b><span class="ltr"><span data-count="90">90</span>+</span></b><span>בבגרות במתמטיקה</span></li>
+        <li><b>תואר</b><span>בבר אילן, כבר בתיכון</span></li>
+        <li><b>ניסיון</b><span>בשיעורים פרטיים</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="about gut" aria-labelledby="about-h">
+    <div class="wrap">
+      <div class="about-head">
+        <p class="eyebrow rv">מי מלמד</p>
+        <h2 class="h2 rv" id="about-h">אני עדיין בתיכון וכבר בתואר,<br><span class="grad">אז אני יודע איפה נופלים.</span></h2>
+        <p class="lede rv">הקשיים עוד טריים אצלי, ואני מסביר אותם בשפה של תלמידים.</p>
+      </div>
+      <ol class="path rv" id="path">
+        <li class="node"><span class="when">נוער מוכשר</span><h3>התוכנית לנוער מוכשר</h3><p>5 יחידות בשלוש שנים, עם מפגש אחד בשבוע.</p></li>
+        <li class="node"><span class="when">כיתה י׳</span><h3>סיום 5 יחידות</h3><p>בגרות במתמטיקה בציון מעל 90.</p></li>
+        <li class="node"><span class="when">היום</span><h3>תואר בבר אילן</h3><p>מתמטיקה ומדעי המחשב, במקביל לכיתה י״ב.</p></li>
+        <li class="node"><span class="when">ובזום</span><h3>מלמד שיעורים פרטיים</h3><p>כבר עם ניסיון, אחד על אחד.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="method gut" id="method" aria-labelledby="method-h">
+    <div class="wrap">
+      <p class="eyebrow">השיטה</p>
+      <h2 class="h2" id="method-h">כל קושי במתמטיקה מתחיל בפער אחד שלא נסגר.</h2>
+      <p class="lede">כשבסיס אחד לא נסגר, כל מה שנבנה מעליו מתנדנד. לכן מתחילים ממנו, גם כשיש רק שיעור אחד לפני מבחן.</p>
+    </div>
+    <div class="mgrid">
+      <div class="msteps">
+        <div class="mstep on"><span class="num">1</span><h3>מוצאים את הפער.</h3><p>רוב הקשיים בכיתה יא מתחילים בנושא מכיתה ט שאף אחד לא עצר לסגור. בשיחת האבחון אני מאתר בדיוק איפה.</p></div>
+        <div class="mstep"><span class="num">2</span><h3>סוגרים אותו מהבסיס.</h3><p>חוזרים לנקודה הזו ובונים אותה מהבסיס, עד שהיא מובנת ולא רק משוננת.</p></div>
+        <div class="mstep"><span class="num">3</span><h3>ומתקדמים בביטחון למבחן.</h3><p>עם בסיס יציב מתקדמים בביטחון, שיעור אחרי שיעור, לקראת המבחן, המתכונת והבגרות.</p></div>
+      </div>
+      <div class="mvis">
+        <div class="stage">
+          <svg id="stairs" viewBox="0 0 640 470" data-state="1" role="img" aria-label="מדרגות לפי כיתות, מכיתה ז ועד יב. מדרגת כיתה ט חסרה, נבנית מחדש, ואז מטפסים עד הבגרות.">
+            <defs>
+              <linearGradient id="stepG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d2d35"/><stop offset="1" stop-color="#16161a"/></linearGradient>
+              <linearGradient id="fillG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6aa5ff"/><stop offset="1" stop-color="#1764f4"/></linearGradient>
+              <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <line x1="44" y1="390" x2="600" y2="390" stroke="#2b2b31" stroke-width="1.5"/>
+            <rect class="st" x="497" y="342" width="82" height="48" rx="5"/>
+            <rect class="st" x="413" y="294" width="82" height="96" rx="5"/>
+            <rect class="gapbox" x="331" y="248" width="78" height="140" rx="6"/>
+            <rect class="gapfill" x="329" y="246" width="82" height="144" rx="5"/>
+            <rect class="st" x="245" y="198" width="82" height="192" rx="5"/>
+            <rect class="st" x="161" y="150" width="82" height="240" rx="5"/>
+            <rect class="st" x="77" y="102" width="82" height="288" rx="5"/>
+            <line class="st-top" x1="503" y1="342" x2="573" y2="342"/>
+            <line class="st-top" x1="419" y1="294" x2="489" y2="294"/>
+            <line class="st-top" x1="251" y1="198" x2="321" y2="198"/>
+            <line class="st-top" x1="167" y1="150" x2="237" y2="150"/>
+            <line class="st-top" x1="83" y1="102" x2="153" y2="102"/>
+            <text class="lbl" x="538" y="420">ז׳</text>
+            <text class="lbl" x="454" y="420">ח׳</text>
+            <text class="lbl" x="370" y="420">ט׳</text>
+            <text class="lbl" x="286" y="420">י׳</text>
+            <text class="lbl" x="202" y="420">י״א</text>
+            <text class="lbl" x="118" y="420">י״ב</text>
+            <text class="note gapn" x="370" y="226">הפער</text>
+            <text class="note fixn" x="370" y="226">נסגר</text>
+            <g class="flag" id="flag">
+              <rect x="66" y="44" width="104" height="36" rx="18" fill="#ffffff"/>
+              <text x="118" y="68" text-anchor="middle" style="font:700 18px var(--font)" fill="#0a0a0c">בגרות</text>
+            </g>
+            <g id="marker" transform="translate(454 278)"><circle r="13" fill="#ffffff" filter="url(#glow)"/></g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tracks gut" id="tracks" aria-labelledby="tracks-h">
+    <div class="wrap">
+      <p class="eyebrow rv">מסלולים ומחירים</p>
+      <h2 class="h2 rv" id="tracks-h">שני מסלולים: בית ספר ונוער מוכשר.</h2>
+      <div class="seg rv" role="tablist" aria-label="בחירת מסלול">
+        <span class="seg-ind" aria-hidden="true"></span>
+        <button role="tab" id="tab-school" aria-controls="p-school" aria-selected="true" type="button">בית ספר</button>
+        <button role="tab" id="tab-gifted" aria-controls="p-gifted" aria-selected="false" tabindex="-1" type="button">נוער מוכשר במתמטיקה</button>
+      </div>
+      <div class="panels rv">
+        <article class="panel school" id="p-school" role="tabpanel" aria-labelledby="tab-school">
+          <div>
+            <span class="badge">חטיבה ותיכון</span>
+            <h3>מתמטיקה בבית הספר</h3>
+            <p class="d">בכל רמה, מ־3 ועד 5 יחידות. לתלמידים שמשהו בחומר לא מתיישב, ולתלמידים שרוצים להגיע למבחן רגועים ומוכנים.</p>
+            <ul class="feat">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#1764f4" opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1764f4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>חטיבת ביניים: סגירת פערים לפני התיכון, כשעוד קל לתקן</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#1764f4" opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1764f4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>תיכון, 3, 4 ו־5 יחידות: שיעור בודד לפני מבחן, או ליווי לאורך השנה</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#1764f4" opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1764f4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>הכנה למבחנים, למתכונת, לבגרות ולמועד ב</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#1764f4" opacity=".12"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#1764f4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>גם למי שבטוח שמתמטיקה זה לא בשבילו. בלי שיפוטיות, ובקצב שלו</li>
+            </ul>
+          </div>
+          <div class="pricebox">
+            <div>
+              <p class="plabel">שיעור פרטי</p>
+              <div class="price">100 ₪<small>לשעה</small></div>
+              <ul class="pmeta"><li>גם שיעור בודד, בלי חבילות</li><li>בזום, מכל מקום בארץ</li><li>שיחת אבחון של 20 דקות בחינם</li></ul>
+            </div>
+            <a class="btn btn-primary mag" data-wa="school" href="#contact">לשיחת אבחון</a>
+          </div>
+        </article>
+        <article class="panel gifted" id="p-gifted" role="tabpanel" aria-labelledby="tab-gifted" hidden>
+          <div>
+            <span class="badge">בוגר התוכנית</span>
+            <h3>תלמידי התוכנית לנוער מוכשר</h3>
+            <p class="d">הייתי בתוכנית בעצמי וסיימתי בה 5 יחידות בכיתה י׳. מפגש אחד בשבוע וכל השאר בבית: אני מכיר את הקצב ואת המבחנים מבפנים, ויודע איפה בדיוק נוצרים הפערים.</p>
+            <ul class="feat">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#6ea3ff" opacity=".18"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#8fb8ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>שיעור בין המפגשים, קבוע או רק כשצריך, כדי שהחומר של השבוע יהיה מובן ולא רק פתור</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#6ea3ff" opacity=".18"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#8fb8ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>השלמה מהירה אחרי מפגש שהוחמץ</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#6ea3ff" opacity=".18"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#8fb8ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>הכנה למבחני התוכנית ולבגרות בסוף כיתה י</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#6ea3ff" opacity=".18"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#8fb8ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>הכנה למבחני הקבלה, לתלמידי כיתה ז</li>
+            </ul>
+          </div>
+          <div class="pricebox">
+            <div>
+              <p class="plabel">שיעור פרטי</p>
+              <div class="price">125 ₪<small>לשעה</small></div>
+              <ul class="pmeta"><li>גם שיעור בודד, בלי חבילות</li><li>בזום, מכל מקום בארץ</li><li>שיחת אבחון של 20 דקות בחינם</li></ul>
+            </div>
+            <a class="btn btn-light mag" data-wa="gifted" href="#contact">לשיחת אבחון</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="why gut" id="why" aria-labelledby="why-h">
+    <div class="wrap">
+      <p class="eyebrow rv">למה איתי</p>
+      <h2 class="h2 rv" id="why-h">מורה שעוד זוכר איך זה לא להבין.</h2>
+      <div class="bento">
+        <article class="card darkc wide rv">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5v.4"/><path d="M12 16.5h.01"/></svg></span>
+          <h3>עדיין תלמיד, אז יודע איפה נופלים</h3>
+          <p>אני בתיכון, אז הקשיים עוד טריים אצלי. אני יודע בדיוק איפה תלמידים נופלים, ומסביר את זה בשפה שלהם. ובגלל שאני קרוב אליהם בגיל, קל להם להגיד בקול: לא הבנתי.</p>
+        </article>
+        <article class="card rv" style="--d:.08s">
+          <span class="big"><span class="ltr">90+</span></span>
+          <h3>בבגרות, 5 יחידות</h3>
+          <p>שסיימתי כבר בכיתה י׳, ומשם המשכתי ישר לתואר בבר אילן.</p>
+        </article>
+        <article class="card rv">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5-10-5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/><path d="M22 9v6"/></svg></span>
+          <h3>בוגר התוכנית לנוער מוכשר</h3>
+          <p>ישבתי באותן כיתות, עם אותו קצב ואותם מבחנים. אני יודע מה עובד שם.</p>
+        </article>
+        <article class="card rv" style="--d:.08s">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.8.8 1.3 1.6 1.5 2.5h5c.2-.9.7-1.700 1.5-2.5A6 6 0 0 0 12 3z"/></svg></span>
+          <h3>מלמד למה, לא רק איך</h3>
+          <p>אני מלמד למה דברים עובדים. כשהרעיון ברור, הנוסחה כבר לא צריכה שינון.</p>
+        </article>
+        <article class="card rv" style="--d:.16s">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H8l-4 4z"/><path d="M8 9h8"/><path d="M8 13h5"/></svg></span>
+          <h3>ניסיון בהוראה פרטית</h3>
+          <p>כבר לימדתי שיעורים פרטיים, אחד על אחד בזום, מכל מקום בארץ.</p>
+        </article>
+        <article class="card full rv">
+          <div class="txt">
+            <h3>אפשר גם שיעור אחד בלבד. בלי התחייבות.</h3>
+            <p>אפשר להגיע לשיעור אחד לפני מבחן, ואפשר ללמוד קבוע. אין חבילות ואין מינימום, ושיחת האבחון בחינם.</p>
+          </div>
+          <a class="btn btn-primary mag" href="#contact">לשיחת אבחון בחינם</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact gut" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <p class="eyebrow rv">בואו נתחיל</p>
+      <h2 class="h2 rv" id="contact-h">חמש שאלות קצרות, וההודעה אליי מוכנה בוואטסאפ.</h2>
+      <p class="lede rv">עונים על כמה שאלות קצרות, וההודעה מגיעה אליי מוכנה, עם כל מה שאני צריך לדעת.</p>
+      <div class="cbox rv">
+        <div class="stepper">
+          <div class="prog" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="qbox" id="qbox" aria-live="polite">
+            <p>אפשר לכתוב לי ישירות בוואטסאפ: <span class="num ltr js-phone">052-742-6274</span></p>
+          </div>
+          <div class="snav">
+            <button class="qback" id="qback" type="button" style="visibility:hidden"><span aria-hidden="true">›</span> חזרה</button>
+            <span class="skip">מעדיפים לכתוב בעצמכם? <a data-wa="" href="#contact">ישר לוואטסאפ</a></span>
+          </div>
+        </div>
+        <div class="chat" aria-label="תצוגה מקדימה של ההודעה">
+          <div class="chat-head">
+            <span class="avatar" aria-hidden="true">ז</span>
+            <div><b>זהר אלקיים · מתמטיקה</b><span class="ltr js-phone">052-742-6274</span></div>
+          </div>
+          <div class="chat-body">
+            <span class="daytag">היום</span>
+            <div class="bubble" id="bubble"><span id="btext">היי זהר, הגעתי מהאתר שלך.
+אשמח לשיחת אבחון.</span><span class="meta" aria-hidden="true">עכשיו <svg width="16" height="11" viewBox="0 0 16 11"><path d="M1 6l3 3 6-7M6 9l1 1 7-8" fill="none" stroke="#53bdeb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+          </div>
+          <div class="chat-foot">ההודעה נבנית לפי התשובות שלכם, ונשלחת מהוואטסאפ שלכם.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq gut" id="faq" aria-labelledby="faq-h">
+    <div class="wrap">
+      <p class="eyebrow rv">שאלות</p>
+      <h2 class="h2 rv" id="faq-h">מה הורים שואלים.</h2>
+      <div class="acc rv">
+        <div class="qa"><button type="button" aria-expanded="false" aria-controls="a7" id="q7">זה מתאים גם למי שמתקשה במתמטיקה?<span class="pm" aria-hidden="true"></span></button><div class="ans" id="a7" role="region" aria-labelledby="q7"><div><p>בהחלט, ובשביל זה אני כאן. 3 יחידות, 4 או 5, לא משנה מאיפה מתחילים. בונים מהבסיס, בקצב של התלמיד ובלי שיפוטיות, ואין אצלי שאלה מטופשת.</p></div></div></div>
+        <div class="qa"><button type="button" aria-expanded="false" aria-controls="a1" id="q1">זה מתאים גם לתלמיד חזק?<span class="pm" aria-hidden="true"></span></button><div class="ans" id="a1" role="region" aria-labelledby="q1"><div><p>כן, ובמיוחד בתוכנית לנוער מוכשר. תלמידים חזקים נתקלים בה לפעמים בפעם הראשונה בחומר שלא בא להם בקלות, וצריכים מישהו שיעבוד איתם על החשיבה ולא רק על התשובות.</p></div></div></div>
+        <div class="qa"><button type="button" aria-expanded="false" aria-controls="a6" id="q6">אתה לא צעיר מדי בשביל ללמד?<span class="pm" aria-hidden="true"></span></button><div class="ans" id="a6" role="region" aria-labelledby="q6"><div><p>דווקא זה היתרון. אני עדיין בתיכון, אז הקשיים טריים אצלי ואני יודע בדיוק איפה נופלים. את הבגרות במתמטיקה סיימתי בכיתה י׳, היום אני כבר בתואר, ויש לי ניסיון בשיעורים פרטיים. שיחת האבחון בחינם, כך שאפשר פשוט לבדוק.</p></div></div></div>
+        <div class="qa"><button type="button" aria-expanded="false" aria-controls="a2" id="q2">צריך להתחייב לכמה שיעורים?<span class="pm" aria-hidden="true"></span></button><div class="ans" id="a2" role="region" aria-labelledby="q2"><div><p>לא. אפשר שיעור אחד לפני מבחן, ואפשר ללמוד קבוע. אין חבילות ואין מינימום. אם תרצו, אחרי השיעור אגיד לכם מה אני רואה, ואתם מחליטים אם ומתי להמשיך.</p></div></div></div>
+        <div class="qa"><button type="button" aria-expanded="false" aria-controls="a3" id="q3">למה המחיר שונה בין המסלולים?<span class="pm" aria-hidden="true"></span></button><div class="ans" id="a3" role="region" aria-labelledby="q3"><div><p>שיעור בבית ספר עולה 100 ₪ לשעה. שיעור לתלמידי התוכנית לנוער מוכשר עולה 125 ₪ לשעה, ומותאם לחומר המואץ ולמבחנים של התוכנית.</p></div></div></div>
+        <div class="qa"><button type="button" aria-expanded="false" aria-controls="a4" id="q4">השיעורים קשורים לתוכנית או לבר אילן?<span class="pm" aria-hidden="true"></span></button><div class="ans" id="a4" role="region" aria-labelledby="q4"><div><p>לא. הייתי בתוכנית ואני לומד היום בבר אילן, אבל השיעורים פרטיים לגמרי ואין להם קשר רשמי לתוכנית או לאוניברסיטה.</p></div></div></div>
+        <div class="qa"><button type="button" aria-expanded="false" aria-controls="a5" id="q5">למה רק בזום?<span class="pm" aria-hidden="true"></span></button><div class="ans" id="a5" role="region" aria-labelledby="q5"><div><p>כך אפשר ללמוד מכל מקום בארץ, בלי נסיעות, וקל יותר למצוא שעה שמתאימה לכם.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final gut" aria-labelledby="final-h">
+    <h2 class="h2 rv" id="final-h"><span class="gradw">שיחת האבחון עליי.</span></h2>
+    <p class="rv">20 דקות בזום, בלי תשלום ובלי התחייבות. אחריה מחליטים אם לקבוע שיעור.</p>
+    <div class="rv"><a class="btn btn-primary mag" data-wa="" href="#contact">שליחת הודעה בוואטסאפ</a></div>
+    <span class="phone rv">או ישירות: <span class="num ltr js-phone">052-742-6274</span></span>
+  </section>
+
+</main>
+
+<footer class="gut">
+  <div class="wrap">
+    <span>זהר אלקיים · שיעורים פרטיים במתמטיקה · בזום, מכל מקום בארץ</span>
+    <span>שיעורים פרטיים. אין קשר רשמי לתוכנית לנוער מוכשר במתמטיקה או לאוניברסיטת בר אילן.</span>
+  </div>
+</footer>
+
+<div class="mbar" aria-label="פנייה מהירה">
+  <p><b>שיחת אבחון חינם</b>20 דקות, בלי התחייבות</p>
+  <a class="btn btn-primary" data-wa="" href="#contact">וואטסאפ</a>
+</div>
+
+<script>
+(function(){
+  var PHONE = "972527426274";
+  var PHONE_DISPLAY = "052-742-6274";
+  var RM = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var FINE = window.matchMedia && matchMedia("(hover: hover) and (pointer: fine)").matches;
+  function $(s, r){ return (r || document).querySelector(s); }
+  function $$(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function clamp(v, a, b){ return Math.max(a, Math.min(b, v)); }
+
+  var src = "";
+  try {
+    var h = (location.hash || "").replace(/^#/, "");
+    if (/^src-[a-z0-9-]{1,40}$/i.test(h)) src = h.slice(4);
+    var qs = new URLSearchParams(location.search).get("src");
+    if (!src && qs && /^[a-z0-9-]{1,40}$/i.test(qs)) src = qs;
+    if (src) { try { sessionStorage.setItem("lead-src", src); } catch(e){} }
+    else { try { src = sessionStorage.getItem("lead-src") || ""; } catch(e){} }
+  } catch(e){}
+
+  function wa(text){ return "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(text); }
+  function introMsg(track){
+    var t = "היי זהר, הגעתי מהאתר שלך ואשמח לשיחת אבחון";
+    if (track === "school") t += " במסלול בית ספר";
+    if (track === "gifted") t += " במסלול נוער מוכשר במתמטיקה";
+    t += ".";
+    if (src) t += "\n(מקור: " + src + ")";
+    return t;
+  }
+  $$("[data-wa]").forEach(function(a){
+    a.href = wa(introMsg(a.getAttribute("data-wa")));
+    a.target = "_blank"; a.rel = "noopener";
+  });
+  $$(".js-phone").forEach(function(e){ e.textContent = PHONE_DISPLAY; });
+
+  var path = $("#path"), nodes = path ? $$(".node", path) : [];
+
+  var steps = $$(".mstep"), stairs = $("#stairs"), marker = $("#marker"), flag = $("#flag");
+  var tops = [];
+  for (var i = 0; i < 6; i++) tops.push({ x: 580 - (i + 1) * 84 + 42, y: 390 - (48 + i * 48) });
+  function placeMarker(pos){
+    pos = clamp(pos, 0, 5);
+    var k = Math.min(4, Math.floor(pos)), f = pos - k;
+    var a = tops[k], b = tops[k + 1];
+    var x = a.x + (b.x - a.x) * f;
+    var y = a.y + (b.y - a.y) * f - Math.sin(f * Math.PI) * 26 - 16;
+    marker.setAttribute("transform", "translate(" + x.toFixed(1) + " " + y.toFixed(1) + ")");
+  }
+
+  var nav = $(".nav"), prog = $(".nav-progress"), mbar = $(".mbar"), hero = $(".hero");
+  var layers = $$(".glayer");
+  var ticking = false;
+  function update(){
+    ticking = false;
+    var y = window.scrollY || 0, vh = window.innerHeight, dh = document.documentElement.scrollHeight - vh;
+    nav.classList.toggle("scrolled", y > 8);
+    prog.style.transform = "scaleX(" + (dh > 0 ? clamp(y / dh, 0, 1) : 0).toFixed(4) + ")";
+    if (mbar) mbar.classList.toggle("show", hero.getBoundingClientRect().bottom < 90);
+
+    if (path) {
+      var pr = path.getBoundingClientRect();
+      var pp = RM ? 1 : clamp((vh * 0.82 - pr.top) / (pr.height + vh * 0.25), 0, 1);
+      path.style.setProperty("--p", pp.toFixed(3));
+      nodes.forEach(function(nd, k){ nd.classList.toggle("lit", pp >= Math.max(0.02, k / (nodes.length - 1)) - 0.001); });
+    }
+
+    if (steps.length) {
+      var state = 1;
+      steps.forEach(function(s, idx){ if (s.getBoundingClientRect().top < vh * 0.58) state = idx + 1; });
+      steps.forEach(function(s, idx){ s.classList.toggle("on", idx + 1 === state); });
+      stairs.setAttribute("data-state", state);
+      if (state === 3) {
+        var r3 = steps[2].getBoundingClientRect();
+        var p3 = RM ? 1 : clamp((vh * 0.58 - r3.top) / (r3.height * 0.55), 0, 1);
+        placeMarker(1 + p3 * 4);
+        flag.classList.toggle("show", p3 > 0.9);
+      } else {
+        placeMarker(1);
+        flag.classList.remove("show");
+      }
+    }
+
+    if (!RM && y < vh * 1.4) {
+      layers.forEach(function(l){ l.style.setProperty("--sy", (y * +l.getAttribute("data-depth") * -0.22).toFixed(1) + "px"); });
+    }
+  }
+  function onScroll(){ if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+  update();
+
+  if (FINE && !RM && layers.length) {
+    var mx = 0, my = 0, cx = 0, cy = 0;
+    window.addEventListener("pointermove", function(e){ mx = e.clientX / innerWidth - 0.5; my = e.clientY / innerHeight - 0.5; }, { passive: true });
+    (function loop(){
+      cx += (mx - cx) * 0.06; cy += (my - cy) * 0.06;
+      if ((window.scrollY || 0) < innerHeight * 1.2) {
+        layers.forEach(function(l){
+          var d = +l.getAttribute("data-depth");
+          l.style.setProperty("--mx", (cx * d * -60).toFixed(2) + "px");
+          l.style.setProperty("--my", (cy * d * -40).toFixed(2) + "px");
+        });
+      }
+      requestAnimationFrame(loop);
+    })();
+  }
+
+  if (!RM) {
+    $$("[data-count]").forEach(function(el){
+      var to = +el.getAttribute("data-count"), t0 = null;
+      el.textContent = "0";
+      function step(ts){
+        if (!t0) t0 = ts;
+        var p = clamp((ts - t0) / 1500, 0, 1), e = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(to * e);
+        if (p < 1) requestAnimationFrame(step);
+      }
+      setTimeout(function(){ requestAnimationFrame(step); }, 650);
+    });
+  }
+
+  if (!RM && "IntersectionObserver" in window) {
+    var vh0 = innerHeight;
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.remove("pre"); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+    $$(".rv").forEach(function(el){
+      if (el.getBoundingClientRect().top > vh0 * 0.92) { el.classList.add("pre"); io.observe(el); }
+    });
+  }
+
+  if (FINE && !RM) {
+    $$(".card").forEach(function(c){
+      c.addEventListener("pointermove", function(e){
+        var r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+        c.style.setProperty("--mx", (x * 100).toFixed(1) + "%");
+        c.style.setProperty("--my", (y * 100).toFixed(1) + "%");
+        c.style.setProperty("--rx", ((0.5 - y) * 5).toFixed(2) + "deg");
+        c.style.setProperty("--ry", ((x - 0.5) * 6).toFixed(2) + "deg");
+      });
+      c.addEventListener("pointerleave", function(){ c.style.setProperty("--rx", "0deg"); c.style.setProperty("--ry", "0deg"); });
+    });
+    $$(".mag").forEach(function(b){
+      b.addEventListener("pointermove", function(e){
+        var r = b.getBoundingClientRect();
+        var dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2);
+        b.style.transform = "translate(" + (dx * 0.16).toFixed(1) + "px," + (dy * 0.26).toFixed(1) + "px)";
+      });
+      b.addEventListener("pointerleave", function(){ b.style.transform = ""; });
+    });
+  }
+
+  var ind = $(".seg-ind"), tabs = $$('.seg [role="tab"]');
+  function moveInd(t){ ind.style.width = t.offsetWidth + "px"; ind.style.transform = "translateX(" + t.offsetLeft + "px)"; }
+  function setTab(t, focus){
+    tabs.forEach(function(b){
+      var on = b === t, p = document.getElementById(b.getAttribute("aria-controls"));
+      b.setAttribute("aria-selected", on ? "true" : "false");
+      b.tabIndex = on ? 0 : -1;
+      if (on) { if (p.hidden) { p.hidden = false; p.classList.remove("enter"); void p.offsetWidth; p.classList.add("enter"); } }
+      else p.hidden = true;
+    });
+    moveInd(t);
+    if (focus) t.focus();
+  }
+  tabs.forEach(function(b, i){
+    b.addEventListener("click", function(){ setTab(b); });
+    b.addEventListener("keydown", function(e){
+      if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+        e.preventDefault();
+        var d = e.key === "ArrowLeft" ? 1 : -1;
+        setTab(tabs[(i + d + tabs.length) % tabs.length], true);
+      }
+    });
+  });
+  function current(){ return tabs.filter(function(b){ return b.getAttribute("aria-selected") === "true"; })[0] || tabs[0]; }
+  moveInd(current());
+  window.addEventListener("resize", function(){ moveInd(current()); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ moveInd(current()); });
+
+  $$(".qa > button").forEach(function(b){
+    b.addEventListener("click", function(){
+      var q = b.parentNode, open = !q.classList.contains("open");
+      q.classList.toggle("open", open);
+      b.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
+
+  var S = { who: "", track: "", grade: "", need: "", mode: "" }, cur = 0, dir = 1, nameVal = "", notesVal = "";
+  var OPT = {
+    who: [["parent", "הורה"], ["student", "תלמיד או תלמידה"]],
+    track: [["school", "בית ספר"], ["gifted", "נוער מוכשר במתמטיקה"]],
+    grade: { school: ["ז", "ח", "ט", "י", "יא", "יב"], gifted: ["ז", "ח", "ט", "י"] },
+    need: {
+      school: ["פערים משנים קודמות", "מבחן קרוב", "מתכונת או בגרות", "להבין סוף סוף את החומר", "מעבר בין רמות"],
+      gifted: ["לעמוד בקצב של התוכנית", "השלמה אחרי מפגש שהוחמץ", "מבחן קרוב בתוכנית", "הכנה לבגרות", "מבחני קבלה לתוכנית"]
+    },
+    mode: [["single", "שיעור אחד לפני מבחן"], ["few", "כמה שיעורים לתקופה"], ["regular", "שיעורים קבועים"], ["unsure", "עוד לא בטוח"]]
+  };
+  var Q = [
+    { k: "who", t: "מי כותב?" },
+    { k: "track", t: "איזה מסלול?" },
+    { k: "grade", t: "באיזו כיתה?" },
+    { k: "need", t: "מה הכי דחוף עכשיו?" },
+    { k: "mode", t: "מה מתאים לכם?" },
+    { k: "final", t: "כמעט סיימנו." }
+  ];
+  var qbox = $("#qbox"), back = $("#qback"), bars = $$(".prog i"), bubble = $("#bubble"), btext = $("#btext");
+  var CHECK = '<svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+  function labelOf(list, v){ for (var i = 0; i < list.length; i++) if (list[i][0] === v) return list[i][1]; return v; }
+  function buildMsg(){
+    var L = [], parent = S.who === "parent";
+    L.push("היי זהר, הגעתי מהאתר שלך." + (nameVal ? " קוראים לי " + nameVal + "." : ""));
+    var s = "";
+    if (S.grade) s = parent ? "אני הורה לתלמיד בכיתה " + S.grade : "אני בכיתה " + S.grade;
+    else if (S.who) s = parent ? "אני הורה" : "אני תלמיד";
+    if (S.track === "gifted") {
+      if (S.grade === "ז") s += (s ? ", " : "") + (parent ? "שרוצה להתקבל לתוכנית לנוער מוכשר במתמטיקה" : "ורוצה להתקבל לתוכנית לנוער מוכשר במתמטיקה");
+      else s += s ? (parent ? " שלומד בתוכנית לנוער מוכשר במתמטיקה" : " ולומד בתוכנית לנוער מוכשר במתמטיקה") : "מדובר בתוכנית לנוער מוכשר במתמטיקה";
+    }
+    if (s) L.push(s + ".");
+    if (S.need) L.push("הכי דחוף עכשיו: " + S.need + ".");
+    if (S.mode) L.push((parent ? "מתאים לנו: " : "מתאים לי: ") + labelOf(OPT.mode, S.mode) + ".");
+    if (notesVal) L.push(notesVal);
+    L.push(S.mode === "single" ? "אשמח לקבוע שיעור בזום." : "אשמח לשיחת אבחון.");
+    if (src) L.push("(מקור: " + src + ")");
+    return L.join("\n");
+  }
+  function updateMsg(){
+    var m = buildMsg();
+    btext.textContent = m;
+    if (!RM) { bubble.classList.remove("bump"); void bubble.offsetWidth; bubble.classList.add("bump"); }
+    var sb = $("#sendBtn"); if (sb) sb.href = wa(m);
+  }
+  function optsFor(k){
+    if (k === "grade") return OPT.grade[S.track || "school"].map(function(g){ return [g, g]; });
+    if (k === "need") return OPT.need[S.track || "school"].map(function(n){ return [n, n]; });
+    return OPT[k];
+  }
+  function render(focus){
+    var q = Q[cur];
+    qbox.innerHTML = "";
+    var wrap = document.createElement("div"); wrap.className = "q " + (dir > 0 ? "fwd" : "bwd");
+    var h = document.createElement("h3"); h.id = "qtitle"; h.textContent = q.t; wrap.appendChild(h);
+    if (q.k !== "final") {
+      var g = document.createElement("div");
+      g.className = "opts" + (q.k === "grade" ? " grades" : "");
+      g.setAttribute("role", "group"); g.setAttribute("aria-labelledby", "qtitle");
+      optsFor(q.k).forEach(function(o, i){
+        var b = document.createElement("button");
+        b.type = "button"; b.className = "opt"; b.id = "opt-" + q.k + "-" + i;
+        b.setAttribute("aria-pressed", S[q.k] === o[0] ? "true" : "false");
+        var sp = document.createElement("span"); sp.textContent = o[1]; b.appendChild(sp);
+        if (q.k !== "grade") { var ck = document.createElement("span"); ck.className = "ck"; ck.innerHTML = CHECK; b.appendChild(ck); }
+        b.addEventListener("click", function(){
+          if (q.k === "track" && S.track !== o[0]) {
+            if (S.grade && OPT.grade[o[0]].indexOf(S.grade) < 0) S.grade = "";
+            S.need = "";
+          }
+          S[q.k] = o[0];
+          $$(".opt", g).forEach(function(x){ x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+          updateMsg();
+          setTimeout(function(){ go(1, true); }, RM ? 0 : 280);
+        });
+        g.appendChild(b);
+      });
+      wrap.appendChild(g);
+    } else {
+      var f = document.createElement("div"); f.className = "fields";
+      f.innerHTML =
+        '<div class="fgrp"><label for="f-name">שם (לא חובה)</label><input id="f-name" type="text" autocomplete="given-name" maxlength="40"></div>' +
+        '<div class="fgrp"><label for="f-notes">עוד משהו שכדאי שאדע? (לא חובה)</label><textarea id="f-notes" maxlength="400" placeholder="למשל: יש מבחן בעוד שבועיים בפונקציות"></textarea></div>' +
+        '<div class="sendrow"><a class="btn btn-primary" id="sendBtn" target="_blank" rel="noopener" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>שליחה בוואטסאפ</a>' +
+        '<div class="subrow"><button class="btn btn-ghost" id="copyBtn" type="button">העתקת ההודעה</button><span>או ישירות: <span class="num ltr">' + PHONE_DISPLAY + '</span></span></div>' +
+        '<p class="toast" id="toast" role="status"></p></div>';
+      wrap.appendChild(f);
+    }
+    qbox.appendChild(wrap);
+    if (q.k === "final") {
+      var ni = $("#f-name"), nt = $("#f-notes");
+      ni.value = nameVal; nt.value = notesVal;
+      ni.addEventListener("input", function(){ nameVal = ni.value.trim(); updateMsg(); });
+      nt.addEventListener("input", function(){ notesVal = nt.value.trim(); updateMsg(); });
+      $("#copyBtn").addEventListener("click", function(){
+        var toast = $("#toast"), text = btext.textContent;
+        function fallback(){
+          var r = document.createRange(); r.selectNodeContents(btext);
+          var sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+          toast.textContent = "ההודעה מסומנת. אפשר להעתיק ולהדביק בוואטסאפ.";
+        }
+        try { navigator.clipboard.writeText(text).then(function(){ toast.textContent = "ההודעה הועתקה. אפשר להדביק בוואטסאפ."; }, fallback); }
+        catch(e){ fallback(); }
+      });
+      updateMsg();
+    }
+    back.style.visibility = cur === 0 ? "hidden" : "visible";
+    bars.forEach(function(b, i){ b.classList.toggle("done", i < cur || cur === Q.length - 1); });
+    if (focus) {
+      var first = $(".opt[aria-pressed='true']", qbox) || $(".opt", qbox) || $("#f-name");
+      if (first) first.focus({ preventScroll: true });
+    }
+  }
+  function go(d, focus){ dir = d; cur = clamp(cur + d, 0, Q.length - 1); render(focus); }
+  back.addEventListener("click", function(){ go(-1, true); });
+  render(false);
+  updateMsg();
+})();
+</script>
+</body>
+</html>
